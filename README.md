@@ -1,5 +1,5 @@
 # NestJs Server Application
-
+Basic NestJs REST API to perform CURD operations from firestore. Initial mock data is retrieved from https://jsonplaceholder.typicode.com/
 ## Clone Instructions
 
  - Clone the repository
