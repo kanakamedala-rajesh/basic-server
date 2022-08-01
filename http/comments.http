@@ -1,0 +1,38 @@
+### Get all comments
+GET http://localhost:3000/comments
+
+### Get a comment with ID 1007
+GET http://localhost:3000/comments/1007
+
+### Get all comments for post with ID 1007
+GET http://localhost:3000/comments?postId=1007
+
+### Creats a new comment
+POST http://localhost:3000/comments
+content-type: application/json
+
+{
+    "body": "This is one of the greatest ever films. Certainly in the top 2 or 3 in James bond rankings. This is an amazing film. The Villain, Girl, Henchman and of course, Sean Connery as bond are amazing. This is his best performance by far. He shows us in this film why he is the best ever bond. Goldfinger is a classic villain and Oddjob is the greatest of all the Bond henchman. The sight of the girl painted gold lying on the bed is an iconic movie scene. Even the gadgets and the car are amazing. There is nothing negative to say about this film and this is about as close you will ever get to a perfect action and spy thriller movie.",
+    "name": "Goldfinger Review",
+    "id": 1007,
+    "postId": 1007,
+    "email": "Tom.Wilkinson@gardner.biz"
+}
+
+### Update a comment with ID 1007
+PATCH http://localhost:3000/comments/1007
+content-type: application/json
+
+{
+    "body": "This is one of the greatest ever films. Certainly in the top 2 or 3 in James bond rankings. This is an amazing film. The Villain, Girl, Henchman and of course, Sean Connery as bond are amazing. This is his best performance by far. He shows us in this film why he is the best ever bond. Goldfinger is a classic villain and Oddjob is the greatest of all the Bond henchman. The sight of the girl painted gold lying on the bed is an iconic movie scene. Even the gadgets and the car are amazing. There is nothing negative to say about this film and this is about as close you will ever get to a perfect action and spy thriller movie.",
+    "name": "Goldfinger (1964) Review",
+    "id": 1007,
+    "postId": 1007,
+    "email": "Tom.Wilkinson@gardner.biz"
+}
+
+### Delete a comment with ID 1007
+DELETE http://localhost:3000/comments/1007
+
+### Initialize the comments document with default data, Use this with caution.
+POST http://localhost:3000/comments/init

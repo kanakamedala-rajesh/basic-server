@@ -1,4 +1,4 @@
-export interface Photo {
+export class Photo {
   albumId: number;
   id: number;
   title: string;

@@ -1,0 +1,36 @@
+### Get all todos
+GET http://localhost:3000/todos
+
+### Get a todo with ID 1007
+GET http://localhost:3000/todos/1007
+
+### Get all todos for user with ID 1007
+GET http://localhost:3000/todos?userId=1007
+
+### Creats a new todo
+POST http://localhost:3000/todos
+content-type: application/json
+
+{
+    "userId": 1007,
+    "id": 1007,
+    "title": "signup for the new movie",
+    "completed": false
+}
+
+### Update a todo with ID 1007
+PATCH http://localhost:3000/todos/1007
+content-type: application/json
+
+{
+    "userId": 1007,
+    "id": 1007,
+    "title": "signup for the new movie titled: No Time to Die 2",
+    "completed": false
+}
+
+### Delete a todo with ID 1007
+DELETE http://localhost:3000/todos/1007
+
+### Initialize the todos document with default data
+POST http://localhost:3000/todos/init

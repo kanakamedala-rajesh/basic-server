@@ -6,12 +6,11 @@ import { AppController } from './app.controller';
 import { FirestoreModule } from './firestore/firestore.module';
 
 import { AlbumsModule } from './albums/albums.module';
+import { CommentsModule } from './comments/comments.module';
+import { PhotosModule } from './photos/photos.module';
 import { PostsModule } from './posts/posts.module';
+import { TodosModule } from './todos/todos.module';
 import { UserModule } from './users/users.module';
-
-import { AlbumsService } from './albums/albums.service';
-import { PostsService } from './posts/posts.service';
-import { UsersService } from './users/users.service';
 
 @Module({
   controllers: [AppController],
@@ -19,6 +18,9 @@ import { UsersService } from './users/users.service';
     UserModule,
     PostsModule,
     AlbumsModule,
+    CommentsModule,
+    TodosModule,
+    PhotosModule,
 
     ConfigModule.forRoot({
       isGlobal: true,
@@ -31,6 +33,5 @@ import { UsersService } from './users/users.service';
       inject: [ConfigService],
     }),
   ],
-  providers: [UsersService, PostsService, AlbumsService],
 })
 export class AppModule {}

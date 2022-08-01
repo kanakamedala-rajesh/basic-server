@@ -1,0 +1,38 @@
+### Get all photos
+GET http://localhost:3000/photos
+
+### Get a photo with ID 1007
+GET http://localhost:3000/photos/1007
+
+### Get all photos for album with ID 1007
+GET http://localhost:3000/photos?albumId=1007
+
+### Creats a new photo
+POST http://localhost:3000/photos
+content-type: application/json
+
+{
+    "thumbnailUrl": "https://www.pngegg.com/en/png-ecmnv/download?width=128",
+    "id": 1007,
+    "title": "James Bond 007",
+    "url": "https://www.pinterest.com/pin/288582288619884332/",
+    "albumId": 1007
+}
+
+### Update a photo with ID 1007
+PATCH http://localhost:3000/photos/1007
+content-type: application/json
+
+{
+    "thumbnailUrl": "https://www.pngegg.com/en/png-ecmnv/download?width=128",
+    "id": 1007,
+    "title": "James Bond 007 Logo",
+    "url": "https://www.pinterest.com/pin/288582288619884332/",
+    "albumId": 1007
+}
+
+### Delete a photo with ID 1007
+DELETE http://localhost:3000/photos/1007
+
+### Initialize the photos document with default data
+POST http://localhost:3000/photos/init

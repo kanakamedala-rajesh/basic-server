@@ -1,0 +1,34 @@
+### Get all albums
+GET http://localhost:3000/albums
+
+### Get a album with ID 1007
+GET http://localhost:3000/albums/1007
+
+### Get all albums for user with ID 1007
+GET http://localhost:3000/albums?userId=1007
+
+### Creats a new album
+POST http://localhost:3000/albums
+content-type: application/json
+
+{
+    "userId": 1007,
+    "id": 1007,
+    "title": "James Bond Theme"
+}
+
+### Update a album with ID 1007
+PATCH http://localhost:3000/albums/1007
+content-type: application/json
+
+{
+    "userId": 1007,
+    "id": 1007,
+    "title": "Goldfinger (Shirley Bassey song)"
+}
+
+### Delete a album with ID 1007
+DELETE http://localhost:3000/albums/1007
+
+### Initialize the albums document with default data, Use this with caution.
+POST http://localhost:3000/albums/init
