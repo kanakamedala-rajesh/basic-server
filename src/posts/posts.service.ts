@@ -68,21 +68,17 @@ export class PostsService {
     this.logger.log(`Getting posts for user with ID: ${userId}`);
 
     const posts: PostsDocument[] = [];
+    const snapshot = await this.postsCollection
+      .where('userId', '==', Number(userId))
+      .get();
 
-    try {
-      const snapshot = await this.postsCollection
-        .where('userId', '==', userId)
-        .get();
+    this.logger.log(snapshot.size);
 
-      this.logger.log(snapshot.size);
+    snapshot.forEach((doc) => {
+      this.logger.debug(`Found post: ${doc.id}`);
+      posts.push(doc.data());
+    });
 
-      snapshot.forEach((doc) => {
-        this.logger.debug(`Found post: ${doc.id}`);
-        posts.push(doc.data());
-      });
-    } catch (error) {
-      this.logger.error(error);
-    }
     return posts;
   }
 }

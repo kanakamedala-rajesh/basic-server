@@ -9,7 +9,7 @@ import {
   Req,
 } from '@nestjs/common';
 import { Request } from 'express';
-import POSTS from 'src/data/posts.data';
+import ALBUMS from 'src/data/albums.data';
 import { AlbumsService } from './albums.service';
 
 @Controller('albums')
@@ -18,22 +18,21 @@ export class AlbumsController {
 
   @Post('/init')
   init() {
-    return this.albumsService.initializeAlbums(POSTS);
+    return this.albumsService.initializeAlbums(ALBUMS);
   }
 
   @Get()
-  getAlbums() {
-    return this.albumsService.getAlbums();
+  getUserAlbums(@Query() query: { userId: number }) {
+    if (query.userId) {
+      return this.albumsService.getUserAlbums(query.userId);
+    } else {
+      return this.albumsService.getAlbums();
+    }
   }
 
   @Get('/:albumId')
   getAlbum(@Param() params: { albumId: number }) {
     return this.albumsService.getAlbum(params.albumId);
-  }
-
-  @Get()
-  getUserAlbums(@Query() query: { userId: number }) {
-    return this.albumsService.getUserAlbums(query.userId);
   }
 
   @Delete('/:albumId')

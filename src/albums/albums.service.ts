@@ -13,6 +13,10 @@ export class AlbumsService {
   ) {}
 
   async initializeAlbums(albums: Album[]): Promise<AlbumsDocument[]> {
+    this.logger.log(
+      `Initializing Albums document with ${albums.length} albums`,
+    );
+
     const createdAlbums: Album[] = [];
     for (const album of albums) {
       const createdDocument = await this.create(album);
@@ -67,7 +71,7 @@ export class AlbumsService {
   async getUserAlbums(userId: number): Promise<AlbumsDocument[]> {
     this.logger.log(`Getting albums for user with ID: ${userId}`);
     const snapshot = await this.albumsCollection
-      .where('userId', '==', userId)
+      .where('userId', '==', Number(userId))
       .get();
     const albums: AlbumsDocument[] = [];
     snapshot.forEach((doc) => {
