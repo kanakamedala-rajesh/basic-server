@@ -9,7 +9,7 @@ import {
   Req,
 } from '@nestjs/common';
 import { Request } from 'express';
-import COMMENTS from 'src/data/comments.data';
+import COMMENTS from '../data/comments.data';
 import { CommentsService } from './comments.service';
 
 @Controller('comments')

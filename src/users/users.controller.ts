@@ -8,7 +8,7 @@ import {
   Req,
 } from '@nestjs/common';
 import { Request } from 'express';
-import USERS from 'src/data/users.data';
+import USERS from '../data/users.data';
 import { UsersService } from './users.service';
 
 @Controller('/users')

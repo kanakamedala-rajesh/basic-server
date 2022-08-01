@@ -9,7 +9,7 @@ import {
   Req,
 } from '@nestjs/common';
 import { Request } from 'express';
-import POSTS from 'src/data/posts.data';
+import POSTS from '../data/posts.data';
 import { PostsService } from './posts.service';
 
 @Controller('posts')

@@ -6,10 +6,10 @@ import {
   Patch,
   Post,
   Query,
-  Req,
+  Req
 } from '@nestjs/common';
 import { Request } from 'express';
-import ALBUMS from 'src/data/albums.data';
+import ALBUMS from '../data/albums.data';
 import { AlbumsService } from './albums.service';
 
 @Controller('albums')

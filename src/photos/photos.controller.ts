@@ -9,7 +9,7 @@ import {
   Req,
 } from '@nestjs/common';
 import { Request } from 'express';
-import PHOTOS from 'src/data/photos.data';
+import PHOTOS from '../data/photos.data';
 import { PhotosService } from './photos.service';
 
 @Controller('photos')

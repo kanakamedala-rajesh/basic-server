@@ -1,4 +1,4 @@
-import { Post } from 'src/entities/Post.entity';
+import { Post } from '../../entities/Post.entity';
 
 export class PostsDocument extends Post {
   static collectionName = 'posts';

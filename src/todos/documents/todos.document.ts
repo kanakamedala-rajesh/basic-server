@@ -1,4 +1,4 @@
-import { Todo } from 'src/entities/Todo.entity';
+import { Todo } from '../../entities/Todo.entity';
 
 export class TodosDocument extends Todo {
   static collectionName = 'todos';

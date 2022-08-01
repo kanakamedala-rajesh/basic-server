@@ -9,7 +9,7 @@ import {
   Req,
 } from '@nestjs/common';
 import { Request } from 'express';
-import TODOS from 'src/data/todos.data';
+import TODOS from '../data/todos.data';
 import { TodosService } from './todos.service';
 
 @Controller('todos')

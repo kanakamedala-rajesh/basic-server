@@ -1,4 +1,4 @@
-import { Photo } from 'src/entities/Photo.entity';
+import { Photo } from '../../entities/Photo.entity';
 
 export class PhotosDocument extends Photo {
   static collectionName = 'photos';
