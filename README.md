@@ -1,4 +1,4 @@
-# NestJs Server Application
+# NestJs Server Application [![Coverage Status](https://coveralls.io/repos/github/kanakamedala-rajesh/basic-server/badge.svg?branch=master)](https://coveralls.io/github/kanakamedala-rajesh/basic-server?branch=master)
 
 Basic NestJs REST API to perform CURD operations from firestore. Initial mock data is retrieved from https://jsonplaceholder.typicode.com/
 

@@ -6,7 +6,7 @@ import {
   Patch,
   Post,
   Query,
-  Req
+  Req,
 } from '@nestjs/common';
 import { Request } from 'express';
 import ALBUMS from '../data/albums.data';
