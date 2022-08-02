@@ -1,4 +1,6 @@
-# NestJs Server Application [![Coverage Status](https://coveralls.io/repos/github/kanakamedala-rajesh/basic-server/badge.svg?branch=master)](https://coveralls.io/github/kanakamedala-rajesh/basic-server?branch=master)
+# NestJs Server Application 
+[![Coverage Status](https://coveralls.io/repos/github/kanakamedala-rajesh/basic-server/badge.svg?branch=master)](https://coveralls.io/github/kanakamedala-rajesh/basic-server?branch=master)
+[![Node.js CI](https://github.com/kanakamedala-rajesh/basic-server/actions/workflows/nodejs.yml/badge.svg?branch=master)](https://github.com/kanakamedala-rajesh/basic-server/actions/workflows/nodejs.yml)
 
 Basic NestJs REST API to perform CURD operations from firestore. Initial mock data is retrieved from https://jsonplaceholder.typicode.com/
 
@@ -14,6 +16,7 @@ Basic NestJs REST API to perform CURD operations from firestore. Initial mock da
 - `yarn start:dev`
 
 ## HTTP Requests
+All possible HTTP request sample are present within `http` directory. Some of the sample ones are listed below
 
 ### Users Specific
 
@@ -26,3 +29,4 @@ Basic NestJs REST API to perform CURD operations from firestore. Initial mock da
 - http://localhost:3000/posts - retrieves all posts from firestore
 
 ## Known Issues
+- Improve code coverage
