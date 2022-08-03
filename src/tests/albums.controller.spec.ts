@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { AlbumsController } from '../src/albums/albums.controller';
-import { AlbumsService } from '../src/albums/albums.service';
-import { AppModule } from '../src/app.module';
+import { AlbumsController } from '../albums/albums.controller';
+import { AlbumsService } from '../albums/albums.service';
+import { AppModule } from '../app.module';
 
 describe('AlbumsController', () => {
   let controller: AlbumsController;
